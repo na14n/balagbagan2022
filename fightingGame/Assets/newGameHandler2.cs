@@ -50,15 +50,21 @@ public class newGameHandler2 : MonoBehaviour
     //Attack Buttons
     public void p1LowPunch()
     {
-        StartCoroutine(delaySystem(3,75,player2HP,2,2,2));
+        StartCoroutine(delaySystem(3,75,player2HP,1,2,2));
         Debug.Log("Player 1 used LowPunch.");
     }
 
     public void p1Special()
     {
-        StartCoroutine(delaySystem(25,101,player2HP,2,5,3));
+        StartCoroutine(delaySystem(25,101,player2HP,1,5,3));
         Debug.Log("Player 1 used Special.");
     }
+
+    /* public void p2HighPunch()
+    {
+        StartCoroutine(delaySystem( Attack Damage, Attack Accuracy, kaninong HP mababawasan, sino umatake,delay ng atk, delay ng miss));
+        Debug.Log("Player 1 used HighPunch.");
+    } */
 
     // Start is called before the first frame update
     void Start()

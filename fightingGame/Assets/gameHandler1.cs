@@ -6,6 +6,11 @@ using UnityEngine.SceneManagement;
 
 public class gameHandler1 : MonoBehaviour
 {
+
+
+
+
+
     //Menu Button
     public GameObject startGame;
 

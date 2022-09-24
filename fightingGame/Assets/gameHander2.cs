@@ -1,6 +1,7 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class gameHander2 : MonoBehaviour
 {
@@ -9,6 +10,7 @@ public class gameHander2 : MonoBehaviour
 
     public int player1HP = 100;
     public int player2HP = 100;
+    
 
     // Damage System
     void dealDamage(int damageAmount, float accuracy, int playerHP, int playerN)

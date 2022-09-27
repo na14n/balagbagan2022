@@ -71,18 +71,41 @@ public class newGameHandler2 : MonoBehaviour
         StartCoroutine(delaySystem(12,45,player2HP,1,3,2));
         Debug.Log("Player 1 used HighKick.");
     }
+
     public void p1Special()
     {
         StartCoroutine(delaySystem(25,101,player2HP,1,5,3));
         Debug.Log("Player 1 used Special.");
     }
 
+    public void p2LowPunch()
+    {
+        StartCoroutine(delaySystem(3,75,player1HP,2,2,2));
+        Debug.Log("Player 2 used LowPunch.");
+    }
+
+    public void p2HighPunch()
+    {
+        StartCoroutine(delaySystem(8,55,player1HP,2,3,2));
+        Debug.Log("Player 2 used HighPunch.");
+    }
+
+    public void p2LowKick()
+    {
+        StartCoroutine(delaySystem(6,65,player1HP,2,2,2));
+        Debug.Log("Player 2 used LowKick.");
+    }
+
+    public void p2HighKick()
+    {
+        StartCoroutine(delaySystem(12,45,player1HP,2,3,2));
+        Debug.Log("Player 2 used HighKick.");
+    }
     public void p2Special()
     {
         StartCoroutine(delaySystem(25,101,player1HP,2,5,3));
         Debug.Log("Player 2 used Special.");
     }
-
 
     /* public void p2HighPunch()
     {

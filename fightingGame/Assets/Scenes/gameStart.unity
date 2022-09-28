@@ -2112,10 +2112,12 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   player1AtkUI: {fileID: 1142442398}
   player2AtkUI: {fileID: 601164436}
+  special: {fileID: 21519504}
+  special2: {fileID: 198038070}
   player1HPUI: {fileID: 1516896292}
   player2HPUI: {fileID: 1895385292}
-  player1HP: 100
-  player2HP: 100
+  player2HP: 50
+  player1HP: 50
 --- !u!4 &1299712125
 Transform:
   m_ObjectHideFlags: 0

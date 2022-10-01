@@ -9,7 +9,14 @@ using System;
 public class gameHandler1 : MonoBehaviour
 {
 
+    //Player Name
+    public static gameHandler1 playerName;
+    public TMP_InputField inputField;
+    public TMP_InputField inputField1;
+    public string  name1;
+    public string name2;
 
+    //Player HP
     public static gameHandler1 hpHandler1;
     public TMP_InputField hpSet;
     public int maxHpSet;
@@ -19,8 +26,20 @@ public class gameHandler1 : MonoBehaviour
 
     void Awake()
     {
+
+        //hp
         if (hpHandler1 == null) {
             hpHandler1 = this;
+            DontDestroyOnLoad(gameObject);
+        }
+
+        else {
+            Destroy(gameObject);
+        }
+
+        //name
+        if (playerName == null) {
+            playerName = this;
             DontDestroyOnLoad(gameObject);
         }
 
@@ -45,6 +64,8 @@ public class gameHandler1 : MonoBehaviour
     public void pressStart(){
         StartCoroutine(delayPress());
         maxHpSet = System.Convert.ToInt32(hpSet.text);
+        name1 = inputField.text;
+        name2 = inputField1.text;
         Debug.Log("Start");
     }
 

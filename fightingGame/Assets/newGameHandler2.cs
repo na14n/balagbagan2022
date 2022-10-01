@@ -8,6 +8,9 @@ using TMPro;
 public class newGameHandler2 : MonoBehaviour 
 {
     
+    //Player Name
+    public TextMeshProUGUI displayName1;
+    public TextMeshProUGUI displayName2;
 
     // Attack Canvases
     public GameObject player1AtkUI;
@@ -28,6 +31,8 @@ public class newGameHandler2 : MonoBehaviour
     void Awake(){
         player1HP = gameHandler1.hpHandler1.maxHpSet;
         player2HP = gameHandler1.hpHandler1.maxHpSet;
+        displayName1.text = gameHandler1.playerName.name1;
+        displayName2.text = gameHandler1.playerName.name2;        
     }
     void Start()
     {
@@ -115,7 +120,7 @@ public class newGameHandler2 : MonoBehaviour
 
     public void p1Special()
     {
-        StartCoroutine(delaySystem(25,101,player2HP,1,5,3));
+        StartCoroutine(delaySystem(25,90,player2HP,1,5,3));
         Debug.Log("Player 1 used Special.");
         special.SetActive(false);
     }
@@ -145,7 +150,7 @@ public class newGameHandler2 : MonoBehaviour
     }
     public void p2Special()
     {
-        StartCoroutine(delaySystem(25,101,player1HP,2,5,3));
+        StartCoroutine(delaySystem(25,90,player1HP,2,5,3));
         Debug.Log("Player 2 used Special.");
         special2.SetActive(false);
     }

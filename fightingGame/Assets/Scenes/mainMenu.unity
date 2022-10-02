@@ -1813,10 +1813,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   inputField: {fileID: 2067384951}
   inputField1: {fileID: 534225559}
-  name1: 
-  name2: 
+  name1: Player1
+  name2: Player2
   hpSet: {fileID: 1771696028}
-  maxHpSet: 0
+  maxHpSet: 100
   startGame: {fileID: 0}
 --- !u!4 &1692570414
 Transform:

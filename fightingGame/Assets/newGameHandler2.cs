@@ -60,7 +60,7 @@ public class newGameHandler2 : MonoBehaviour
                 yield return new WaitForSeconds(delayATK);
                 playerHP -= damageAmount;
                 player2HP = playerHP;
-                Debug.Log("Player 2 dealt " + damageAmount + " damage.");
+                Debug.Log("Player 1 dealt " + damageAmount + " damage.");
             }
             else
             {

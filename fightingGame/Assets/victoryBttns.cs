@@ -33,8 +33,9 @@ public class victoryBttns : MonoBehaviour
     }
 
     IEnumerator mainMenudelay(){
+        Debug.Log("Returning to Main Menu");
         yield return new WaitForSeconds(2);
-        Debug.Log("This is Delayed");
+        Debug.Log("Returned to Main Menu");
         SceneManager.LoadScene(0);
     }
 }

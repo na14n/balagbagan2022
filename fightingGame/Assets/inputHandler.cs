@@ -15,6 +15,7 @@ public class inputHandler : MonoBehaviour
     public int setHP;
     public string name1;
     public string name2;
+    public int winResult;
 
     void Awake()
     {

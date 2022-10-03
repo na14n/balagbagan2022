@@ -7,8 +7,8 @@ public class hpFill : MonoBehaviour
 {
 
     private Image hpBar;
-    public float currentPlayerHP;
-    private float maxHP;
+    public float currentPlayerHP = 100f;
+    private float maxHP = 100f;
     newGameHandler2 gameHandler;
     gameHandler1 setHp;
 

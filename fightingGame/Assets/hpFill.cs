@@ -10,7 +10,7 @@ public class hpFill : MonoBehaviour
     public float currentPlayerHP = 100f;
     private float maxHP = 100f;
     newGameHandler2 gameHandler;
-    gameHandler1 setHp;
+    inputHandler hpInput;
 
 
     // Start is called before the first frame update
@@ -18,13 +18,13 @@ public class hpFill : MonoBehaviour
     {
         hpBar = GetComponent<Image>();
         gameHandler = GameObject.FindObjectOfType<newGameHandler2>();
-        setHp = GameObject.FindObjectOfType<gameHandler1>();
+        hpInput = GameObject.FindObjectOfType<inputHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        maxHP = setHp.maxHpSet;
+        maxHP = hpInput.setHP;
         currentPlayerHP = gameHandler.player1HP;
         hpBar.fillAmount = currentPlayerHP/maxHP;
     }

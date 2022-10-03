@@ -1,10 +1,17 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
+using TMPro;
+using System;
 
-public class victoryBttns : MonoBehaviour
+public class buttonHandler : MonoBehaviour
 {
+
+    //Menu Button
+     public GameObject startGame;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -17,25 +24,13 @@ public class victoryBttns : MonoBehaviour
         
     }
 
-    public void pressRestart(){
+    public void pressStart(){
         StartCoroutine(delayPress());
         Debug.Log("Start");
     }
 
     IEnumerator delayPress(){
         yield return new WaitForSeconds(2);
-        Debug.Log("This is Delayed");
         SceneManager.LoadScene(1);
-    }
-    public void pressMainmenu(){
-        StartCoroutine(mainMenudelay());
-        Debug.Log("Start");
-    }
-
-    IEnumerator mainMenudelay(){
-        Debug.Log("Returning to Main Menu");
-        yield return new WaitForSeconds(2);
-        Debug.Log("Returned to Main Menu");
-        SceneManager.LoadScene(0);
     }
 }

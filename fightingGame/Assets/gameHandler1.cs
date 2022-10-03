@@ -8,25 +8,62 @@ using System;
 
 public class gameHandler1 : MonoBehaviour
 {
-
     //Player Name
     public static gameHandler1 playerName;
     public TMP_InputField inputField;
     public TMP_InputField inputField1;
-    public string  name1;
-    public string name2;
+    //public string name1;
+    //public string name2;
 
     //Player HP
     public static gameHandler1 hpHandler1;
     public TMP_InputField hpSet;
-    public int maxHpSet;
+    //public int maxHpSet;
 
     //Menu Button
-    public GameObject startGame;
+     public GameObject startGame;
 
-    void Awake()
+    // Start is called before the first frame update
+    void Start()
     {
+        
+    }
 
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+
+    public void setVariable()
+    {
+        inputHandler.inputsHandler.name1 = inputField.text;
+        inputHandler.inputsHandler.name2 = inputField1.text;
+        inputHandler.inputsHandler.setHP = System.Convert.ToInt32(hpSet.text);
+    }
+
+    public void pressStart(){
+        StartCoroutine(delayPress());
+        setVariable();
+        /* inputHandler.inputsHandler.maxHpSet = System.Convert.ToInt32(hpSet.text);
+        name1 = inputField.text;
+        name2 = inputField1.text; */
+        Debug.Log(inputHandler.inputsHandler.setHP + " ");
+        Debug.Log("Start");
+    }
+
+    IEnumerator delayPress(){
+        yield return new WaitForSeconds(2);
+        SceneManager.LoadScene(1);
+    }
+
+    
+
+
+
+    /* void Awake()
+    {
+        
         //hp
         if (hpHandler1 == null) {
             hpHandler1 = this;
@@ -46,33 +83,6 @@ public class gameHandler1 : MonoBehaviour
         else {
             Destroy(gameObject);
         }
-    }
+    } */
 
-
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
-    public void pressStart(){
-        StartCoroutine(delayPress());
-        maxHpSet = System.Convert.ToInt32(hpSet.text);
-        name1 = inputField.text;
-        name2 = inputField1.text;
-        Debug.Log("Start");
-    }
-
-    IEnumerator delayPress(){
-        yield return new WaitForSeconds(2);
-        Debug.Log("This is Delayed");
-        Debug.Log(maxHpSet + " ");
-        SceneManager.LoadScene(1);
-    }
 }

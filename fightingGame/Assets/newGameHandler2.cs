@@ -37,10 +37,10 @@ public class newGameHandler2 : MonoBehaviour
     // Start is called before the first frame update
 
     void Awake(){
-        player1HP = gameHandler1.hpHandler1.maxHpSet;
-        player2HP = gameHandler1.hpHandler1.maxHpSet;
-        displayName1.text = gameHandler1.playerName.name1;
-        displayName2.text = gameHandler1.playerName.name2;        
+        player1HP = inputHandler.inputsHandler.setHP;
+        player2HP = inputHandler.inputsHandler.setHP;
+        displayName1.text = inputHandler.inputsHandler.name1;
+        displayName2.text = inputHandler.inputsHandler.name2;      
     }
     void Start()
     {
@@ -107,8 +107,7 @@ public class newGameHandler2 : MonoBehaviour
             //yield return new WaitForSeconds(1);
             player1AtkUI.SetActive(true);
         }
-<<<<<<< Updated upstream
-=======
+
             if (player1HP <= 0)
         {
             deathScreen();
@@ -123,7 +122,7 @@ public class newGameHandler2 : MonoBehaviour
             SceneManager.LoadScene(2);
             inputHandler.inputsHandler.winResult=1;
         }
->>>>>>> Stashed changes
+
     }
 
     public void deathScreen()

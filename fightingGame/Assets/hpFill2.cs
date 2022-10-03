@@ -5,26 +5,27 @@ using UnityEngine.UI;
 
 public class hpFill2 : MonoBehaviour
 {
-    private Image hpBar2;
-    public float currentPlayer2HP;
-    private float maxHP;
-    newGameHandler2 gameHandler;
-    gameHandler1 setHp;
 
-    
+    private Image hpBar;
+    public float currentPlayerHP = 100f;
+    private float maxHP = 100f;
+    newGameHandler2 gameHandler;
+    inputHandler hpInput;
+
+
     // Start is called before the first frame update
     void Start()
     {
-        hpBar2 = GetComponent<Image>();
+        hpBar = GetComponent<Image>();
         gameHandler = GameObject.FindObjectOfType<newGameHandler2>();
-        setHp = GameObject.FindObjectOfType<gameHandler1>();
+        hpInput = GameObject.FindObjectOfType<inputHandler>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        maxHP = setHp.maxHpSet;
-        currentPlayer2HP = gameHandler.player2HP;
-        hpBar2.fillAmount = currentPlayer2HP/maxHP;
+        maxHP = hpInput.setHP;
+        currentPlayerHP = gameHandler.player2HP;
+        hpBar.fillAmount = currentPlayerHP/maxHP;
     }
 }

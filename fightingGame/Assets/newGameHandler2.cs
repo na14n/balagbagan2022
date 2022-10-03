@@ -31,11 +31,12 @@ public class newGameHandler2 : MonoBehaviour
     // Start is called before the first frame update
 
     void Awake(){
-        player1HP = gameHandler1.hpHandler1.maxHpSet;
-        player2HP = gameHandler1.hpHandler1.maxHpSet;
-        displayName1.text = gameHandler1.playerName.name1;
-        displayName2.text = gameHandler1.playerName.name2;        
+        player1HP = inputHandler.inputsHandler.setHP;
+        player2HP = inputHandler.inputsHandler.setHP;
+        displayName1.text = inputHandler.inputsHandler.name1;
+        displayName2.text = inputHandler.inputsHandler.name2;
     }
+
     void Start()
     {
         player2AtkUI.SetActive(false);
@@ -60,16 +61,17 @@ public class newGameHandler2 : MonoBehaviour
             if (x <=accuracy)
             {
                 isMiss = false;
-                Debug.Log("Player 1 attack !" + isMiss);
+                //Debug.Log("Player 1 attack !" + isMiss);
                 yield return new WaitForSeconds(delayATK);
                 playerHP -= damageAmount;
                 player2HP = playerHP;
                 Debug.Log("Player 1 dealt " + damageAmount + " damage.");
+                Debug.Log(player2HP + " ");
             }
             else
             {
                 isMiss = true;
-                Debug.Log("Player 1 attack !" + isMiss);
+                //Debug.Log("Player 1 attack !" + isMiss);
                 yield return new WaitForSeconds(delayMISS);
                 Debug.Log("Player 1 attack missed. ");
             }
@@ -84,22 +86,30 @@ public class newGameHandler2 : MonoBehaviour
             if (x <=accuracy)
             {
                 isMiss = false;
-                Debug.Log("Is Miss? " + isMiss);
+                //Debug.Log("Is Miss? " + isMiss);
                 yield return new WaitForSeconds(delayATK);
                 playerHP -= damageAmount;
                 player1HP = playerHP;
                 Debug.Log("Player 2 dealt " + damageAmount + " damage.");
-                
+                Debug.Log(player1HP + " ");
             }
             else
             {
                 isMiss = true;
-                Debug.Log("Is Miss? " + isMiss);
+                //Debug.Log("Is Miss? " + isMiss);
                 yield return new WaitForSeconds(delayMISS);
                 Debug.Log("Player 2 attack missed. ");
             }
             //yield return new WaitForSeconds(1);
             player1AtkUI.SetActive(true);
+        }
+            if (player1HP <= 0)
+        {
+            SceneManager.LoadScene(2);
+        }
+            else if (player2HP <= 0)
+        {
+            SceneManager.LoadScene(2);
         }
     }
 
@@ -132,7 +142,7 @@ public class newGameHandler2 : MonoBehaviour
     {
         StartCoroutine(delaySystem(25,90,player2HP,1,5,3));
         Debug.Log("Player 1 used Special.");
-        //special.SetActive(false);
+        special.SetActive(false);
     }
 
     public void p2LowPunch()
@@ -162,7 +172,7 @@ public class newGameHandler2 : MonoBehaviour
     {
         StartCoroutine(delaySystem(25,90,player1HP,2,5,3));
         Debug.Log("Player 2 used Special.");
-        //special2.SetActive(false);
+        special2.SetActive(false);
     }
 
     /* public void p2HighPunch()

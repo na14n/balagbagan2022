@@ -215,7 +215,7 @@ public class videoHandler : MonoBehaviour
     // Idle Video or defaultPlay
 
     public void defaultPlay(){
-        Debug.Log("Default clip played");
+        //Debug.Log("Default clip played");
         videoPlayer.clip = defClip;
     }
 

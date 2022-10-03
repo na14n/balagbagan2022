@@ -27,4 +27,15 @@ public class victoryBttns : MonoBehaviour
         Debug.Log("This is Delayed");
         SceneManager.LoadScene(1);
     }
+    public void pressMainmenu(){
+        StartCoroutine(mainMenudelay());
+        Debug.Log("Start");
+    }
+
+    IEnumerator mainMenudelay(){
+        Debug.Log("Returning to Main Menu");
+        yield return new WaitForSeconds(2);
+        Debug.Log("Returned to Main Menu");
+        SceneManager.LoadScene(0);
+    }
 }

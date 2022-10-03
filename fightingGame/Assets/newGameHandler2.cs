@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.Video;
+using UnityEngine.Audio;
 
 public class newGameHandler2 : MonoBehaviour 
 {
@@ -27,6 +29,10 @@ public class newGameHandler2 : MonoBehaviour
     public int player2HP;
     public int player1HP;
 
+    public AudioSource audioSpeaker;
+    public AudioClip deathAnnounce;
+    public GameObject deathScreenBG;
+    public GameObject deathLogo;
 
     // Start is called before the first frame update
 
@@ -101,7 +107,32 @@ public class newGameHandler2 : MonoBehaviour
             //yield return new WaitForSeconds(1);
             player1AtkUI.SetActive(true);
         }
+<<<<<<< Updated upstream
+=======
+            if (player1HP <= 0)
+        {
+            deathScreen();
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(2);
+            inputHandler.inputsHandler.winResult=2;
+        }
+            else if (player2HP <= 0)
+        {
+            deathScreen();
+            yield return new WaitForSeconds(3);
+            SceneManager.LoadScene(2);
+            inputHandler.inputsHandler.winResult=1;
+        }
+>>>>>>> Stashed changes
     }
+
+    public void deathScreen()
+    {
+        audioSpeaker.PlayOneShot(deathAnnounce);
+        deathLogo.SetActive(true);
+        deathScreenBG.SetActive(true);
+    }
+
 
     //Attack Buttons
     public void p1LowPunch()

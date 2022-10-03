@@ -221,7 +221,7 @@ MonoBehaviour:
         m_CallState: 2
       - m_Target: {fileID: 1299712126}
         m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
-        m_MethodName: play2
+        m_MethodName: p1PunchLowPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -353,9 +353,9 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 1299712126}
-        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
-        m_MethodName: play
+      - m_Target: {fileID: 1299712124}
+        m_TargetAssemblyTypeName: newGameHandler2, Assembly-CSharp
+        m_MethodName: p1Special
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -365,9 +365,9 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 1299712124}
-        m_TargetAssemblyTypeName: newGameHandler2, Assembly-CSharp
-        m_MethodName: p1Special
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p1SpecialPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -584,6 +584,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p2PunchLowPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &171865866
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -701,7 +713,7 @@ MonoBehaviour:
   m_FillMethod: 0
   m_FillAmount: 1
   m_FillClockwise: 1
-  m_FillOrigin: 0
+  m_FillOrigin: 1
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
 --- !u!222 &172288267
@@ -799,6 +811,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1299712124}
         m_TargetAssemblyTypeName: newGameHandler2, Assembly-CSharp
         m_MethodName: p2Special
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p2SpecialPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1364,6 +1388,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p2PunchHighPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &654107891
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1402,73 +1438,16 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 654107888}
   m_CullTransparentMesh: 1
---- !u!1 &721253200
+--- !u!1 &721253200 stripped
 GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1988510499065121864, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+  m_PrefabInstance: {fileID: 1988510498413625112}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 721253202}
-  - component: {fileID: 721253201}
-  m_Layer: 0
-  m_Name: Video Player
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!328 &721253201
+--- !u!328 &721253201 stripped
 VideoPlayer:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
+  m_CorrespondingSourceObject: {fileID: 1988510499065121865, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+  m_PrefabInstance: {fileID: 1988510498413625112}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721253200}
-  m_Enabled: 1
-  m_VideoClip: {fileID: 0}
-  m_TargetCameraAlpha: 1
-  m_TargetCamera3DLayout: 0
-  m_TargetCamera: {fileID: 0}
-  m_TargetTexture: {fileID: 8400000, guid: a23dccb84d8f99f4ea8a0f2feb28d9fd, type: 2}
-  m_TimeReference: 0
-  m_TargetMaterialRenderer: {fileID: 0}
-  m_TargetMaterialProperty: <noninit>
-  m_RenderMode: 2
-  m_AspectRatio: 2
-  m_DataSource: 0
-  m_PlaybackSpeed: 1
-  m_AudioOutputMode: 2
-  m_TargetAudioSources:
-  - {fileID: 0}
-  m_DirectAudioVolumes:
-  - 1
-  m_Url: 
-  m_EnabledAudioTracks: 01
-  m_DirectAudioMutes: 00
-  m_ControlledAudioTrackCount: 1
-  m_PlayOnAwake: 1
-  m_SkipOnDrop: 1
-  m_Looping: 0
-  m_WaitForFirstFrame: 1
-  m_FrameReadyEventEnabled: 0
-  m_VideoShaders: []
---- !u!4 &721253202
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 721253200}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 733.48474, y: 374.19226, z: -14.40864}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 5
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &802816009
 GameObject:
   m_ObjectHideFlags: 0
@@ -1556,6 +1535,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1299712124}
         m_TargetAssemblyTypeName: newGameHandler2, Assembly-CSharp
         m_MethodName: p1LowKick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p1KickLowPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -1834,6 +1825,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p1PunchHighPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &965628667
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1968,6 +1971,18 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p2KickLowPlay
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
 --- !u!114 &1079145566
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2093,6 +2108,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1299712124}
         m_TargetAssemblyTypeName: newGameHandler2, Assembly-CSharp
         m_MethodName: p1HighKick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p1KickHighPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2313,10 +2340,28 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   videoPlayerGO: {fileID: 721253200}
-  vc: {fileID: 32900000, guid: 08a515d13680a7444ac8f90c89c51a71, type: 3}
-  vp1: {fileID: 721253201}
-  clip: {fileID: 32900000, guid: 77f508efde6c63a4781c222d217d20a7, type: 3}
-  defClip: {fileID: 32900000, guid: 6d8b632a4143fcf4ba9f9f29f09ffe2b, type: 3}
+  videoPlayer: {fileID: 721253201}
+  defClip: {fileID: 32900000, guid: 8a6fd4ad18f59d544bf1e677a290c8ca, type: 3}
+  p1Special: {fileID: 32900000, guid: 08a515d13680a7444ac8f90c89c51a71, type: 3}
+  p1SpecialMiss: {fileID: 32900000, guid: 394c78bf9a13d304e9cef9bb7f0095d2, type: 3}
+  p1KickLow: {fileID: 32900000, guid: a87dd3b002a55b64c832d8badcb44e02, type: 3}
+  p1KickLowMiss: {fileID: 32900000, guid: 522f3f3d5de9dbd4585d3627670883a5, type: 3}
+  p1KickHigh: {fileID: 32900000, guid: a13a388e79d16504dbe7739832d2a37b, type: 3}
+  p1KickHighMiss: {fileID: 32900000, guid: 4e05db49016b793468dfdd82042d2e94, type: 3}
+  p1PunchLow: {fileID: 32900000, guid: 77f508efde6c63a4781c222d217d20a7, type: 3}
+  p1PunchLowMiss: {fileID: 32900000, guid: 924f3109651c4054bbb270faba871d3f, type: 3}
+  p1PunchHigh: {fileID: 32900000, guid: c1a4eecc70ffb5f48b5182a01d19573f, type: 3}
+  p1PunchHighMiss: {fileID: 32900000, guid: f4da0c64f0327dd438df4d5120eadba1, type: 3}
+  p2Special: {fileID: 32900000, guid: d8670b435d4fe424f8ad9b107399231c, type: 3}
+  p2SpecialMiss: {fileID: 32900000, guid: eca5134338e1c784a94c6479f6a49f42, type: 3}
+  p2KickLow: {fileID: 32900000, guid: 8ac0559efb0ec3d44ada74e07363a355, type: 3}
+  p2KickLowMiss: {fileID: 32900000, guid: ca0636d9405579c4fb338d661d14e982, type: 3}
+  p2KickHigh: {fileID: 32900000, guid: 140543d80b59d7340b9ef21e3428ff2c, type: 3}
+  p2KickHighMiss: {fileID: 32900000, guid: 9c9a77aab3ef48c4398dde688e0407ed, type: 3}
+  p2PunchLow: {fileID: 32900000, guid: d5f8f8b955d7ade4ba6721203a9daaef, type: 3}
+  p2PunchLowMiss: {fileID: 32900000, guid: 5dad88b688caff94d95faaf6d6c4f050, type: 3}
+  p2PunchHigh: {fileID: 32900000, guid: cbaafb0435796cb4791bbf16ca236c45, type: 3}
+  p2PunchHighMiss: {fileID: 32900000, guid: 5c62b791bba5e644788b9a8e0794aeaa, type: 3}
 --- !u!1 &1322405062
 GameObject:
   m_ObjectHideFlags: 0
@@ -3003,37 +3048,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1516896292}
   m_CullTransparentMesh: 1
---- !u!1 &1529365185
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1529365186}
-  m_Layer: 0
-  m_Name: playerOneHpBar
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1529365186
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1529365185}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 640.2679, y: 424.71866, z: 4.522705}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_ConstrainProportionsScale: 0
-  m_Children: []
-  m_Father: {fileID: 0}
-  m_RootOrder: 4
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1549945478
 GameObject:
   m_ObjectHideFlags: 0
@@ -3610,6 +3624,18 @@ MonoBehaviour:
       - m_Target: {fileID: 1299712124}
         m_TargetAssemblyTypeName: newGameHandler2, Assembly-CSharp
         m_MethodName: p2HighKick
+        m_Mode: 1
+        m_Arguments:
+          m_ObjectArgument: {fileID: 0}
+          m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
+          m_IntArgument: 0
+          m_FloatArgument: 0
+          m_StringArgument: 
+          m_BoolArgument: 0
+        m_CallState: 2
+      - m_Target: {fileID: 1299712126}
+        m_TargetAssemblyTypeName: videoHandler, Assembly-CSharp
+        m_MethodName: p2KickHighPlay
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -4498,3 +4524,64 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115136495}
   m_CullTransparentMesh: 1
+--- !u!1001 &1988510498413625112
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 1988510499065121864, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_Name
+      value: Video Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121865, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_Looping
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_RootOrder
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 733.48474
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 374.19226
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -14.40864
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1988510499065121866, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 52cae29233610ed4aafb90c690f08cc2, type: 3}

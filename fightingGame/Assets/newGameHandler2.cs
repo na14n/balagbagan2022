@@ -162,7 +162,7 @@ public class newGameHandler2 : MonoBehaviour
     {
         StartCoroutine(delaySystem(25,90,player2HP,1,5,3));
         Debug.Log("Player 1 used Special.");
-        //special.SetActive(false);
+        special.SetActive(false);
     }
 
     public void p2LowPunch()
@@ -192,7 +192,7 @@ public class newGameHandler2 : MonoBehaviour
     {
         StartCoroutine(delaySystem(25,90,player1HP,2,5,3));
         Debug.Log("Player 2 used Special.");
-        //special2.SetActive(false);
+        special2.SetActive(false);
     }
 
     /* public void p2HighPunch()

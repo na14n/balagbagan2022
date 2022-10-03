@@ -155,6 +155,7 @@ MonoBehaviour:
   setHP: 100
   name1: Player 1
   name2: Player 2
+  winResult: 0
 --- !u!4 &50945303
 Transform:
   m_ObjectHideFlags: 0
@@ -2463,7 +2464,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8485865601599368769, guid: e77fc7d968bd1644bbd456a25b5943e2, type: 3}
       propertyPath: m_Volume
-      value: 0.1
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 8485865601599368782, guid: e77fc7d968bd1644bbd456a25b5943e2, type: 3}
       propertyPath: m_RootOrder

@@ -38,7 +38,7 @@ public class victoryBttns : MonoBehaviour
 
     IEnumerator mainMenudelay(){
         yield return new WaitForSeconds(1);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
     IEnumerator exitGame(){

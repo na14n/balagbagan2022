@@ -112,14 +112,14 @@ public class newGameHandler2 : MonoBehaviour
         {
             deathScreen();
             yield return new WaitForSeconds(3);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
             inputHandler.inputsHandler.winResult=2;
         }
             else if (player2HP <= 0)
         {
             deathScreen();
             yield return new WaitForSeconds(3);
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(3);
             inputHandler.inputsHandler.winResult=1;
         }
 

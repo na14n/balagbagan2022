@@ -54,7 +54,7 @@ public class gameHandler1 : MonoBehaviour
 
     IEnumerator delayPress(){
         yield return new WaitForSeconds(2);
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
 
     

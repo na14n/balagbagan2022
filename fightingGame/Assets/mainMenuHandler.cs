@@ -23,13 +23,24 @@ public class mainMenuHandler : MonoBehaviour
 
     public void pressStart(){
         StartCoroutine(delayPress());
-        Debug.Log("Starting Game");
+        Debug.Log("Starting Game...");
     }
 
 
     IEnumerator delayPress(){
-        yield return new WaitForSeconds(2);
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
+    }
+
+    public void pressQuit(){
+        StartCoroutine(quit());
+        Debug.Log("Exiting Game...");
+    }
+
+
+    IEnumerator quit(){
+        yield return new WaitForSeconds(1);
+        Application.Quit();
     }
 
 

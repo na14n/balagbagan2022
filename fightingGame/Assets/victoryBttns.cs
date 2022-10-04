@@ -19,23 +19,33 @@ public class victoryBttns : MonoBehaviour
 
     public void pressRestart(){
         StartCoroutine(restart());
-        Debug.Log("Start");
+        Debug.Log("Restarting Game...");
     }
 
     IEnumerator restart(){
         yield return new WaitForSeconds(2);
-        Debug.Log("This is Delayed");
         SceneManager.LoadScene(2);
     }
     public void pressMainmenu(){
         StartCoroutine(mainMenudelay());
-        Debug.Log("Start");
+        Debug.Log("Returning to Main Menu...");
+    }
+
+    public void pressQuit(){
+        StartCoroutine(exitGame());
+        Debug.Log("Exiting Game...");
     }
 
     IEnumerator mainMenudelay(){
-        Debug.Log("Returning to Main Menu");
-        yield return new WaitForSeconds(2);
-        Debug.Log("Returned to Main Menu");
+        yield return new WaitForSeconds(1);
         SceneManager.LoadScene(1);
     }
+
+    IEnumerator exitGame(){
+        yield return new WaitForSeconds(1);
+        Application.Quit();
+    }
+
+
+
 }

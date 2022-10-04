@@ -29,7 +29,6 @@ public class victoryVideoHandler : MonoBehaviour
     public AudioClip victorySfx;
     public AudioClip victoryBgm1;
     public AudioClip victoryBgm2;
-    public AudioClip sheesh;
 
     private void Awake() 
     {
@@ -66,7 +65,6 @@ public class victoryVideoHandler : MonoBehaviour
             winnerName.text = inputHandler.inputsHandler.name2 + " Wins!";
             vp1.Play();
             bgm.Play();
-            sfx.PlayOneShot(sheesh);
         }
     }
 

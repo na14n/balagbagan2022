@@ -48,8 +48,10 @@ public class gameHandler1 : MonoBehaviour
         /* inputHandler.inputsHandler.maxHpSet = System.Convert.ToInt32(hpSet.text);
         name1 = inputField.text;
         name2 = inputField1.text; */
-        Debug.Log(inputHandler.inputsHandler.setHP + " ");
-        Debug.Log("Start");
+        Debug.Log("p1 Name = " + inputHandler.inputsHandler.name1);
+        Debug.Log("p2 Name = " + inputHandler.inputsHandler.name2);
+        Debug.Log("Set Hp = " + inputHandler.inputsHandler.setHP);
+        Debug.Log("Starting Game...");
     }
 
     IEnumerator delayPress(){

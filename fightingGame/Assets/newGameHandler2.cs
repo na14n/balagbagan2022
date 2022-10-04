@@ -189,8 +189,8 @@ public class newGameHandler2 : MonoBehaviour
     public void p2Special()
     {
         StartCoroutine(delaySystem(25,90,player1HP,2,5,3));
-        Debug.Log("Player 2 used Special.");
-        //special2.SetActive(false);
+        //Debug.Log("Player 2 used Special.");
+        special2.SetActive(false);
     }
 
     /* public void p2HighPunch()

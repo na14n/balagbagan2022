@@ -66,18 +66,17 @@ public class newGameHandler2 : MonoBehaviour
             if (x <=accuracy)
             {
                 isMiss = false;
-                Debug.Log("Player 1 attack !" + isMiss);
+                inputHandler.inputsHandler.p1Dealt = damageAmount;
                 yield return new WaitForSeconds(delayATK);
                 playerHP -= damageAmount;
                 player2HP = playerHP;
-                Debug.Log("Player 1 dealt " + damageAmount + " damage.");
+                //Debug.Log("Player 1 dealt " + damageAmount + " damage.");
             }
             else
             {
                 isMiss = true;
-                Debug.Log("Player 1 attack !" + isMiss);
                 yield return new WaitForSeconds(delayMISS);
-                Debug.Log("Player 1 attack missed. ");
+                //Debug.Log("Player 1 attack missed. ");
             }
             //yield return new WaitForSeconds(1);
             player2AtkUI.SetActive(true);
@@ -90,19 +89,18 @@ public class newGameHandler2 : MonoBehaviour
             if (x <=accuracy)
             {
                 isMiss = false;
-                Debug.Log("Is Miss? " + isMiss);
+                inputHandler.inputsHandler.p2Dealt = damageAmount;
                 yield return new WaitForSeconds(delayATK);
                 playerHP -= damageAmount;
                 player1HP = playerHP;
-                Debug.Log("Player 2 dealt " + damageAmount + " damage.");
+                //Debug.Log("Player 2 dealt " + inputHandler.inputsHandler.p2Dealt + " damage.");
                 
             }
             else
             {
                 isMiss = true;
-                Debug.Log("Is Miss? " + isMiss);
                 yield return new WaitForSeconds(delayMISS);
-                Debug.Log("Player 2 attack missed. ");
+                //Debug.Log("Player 2 attack missed. ");
             }
             //yield return new WaitForSeconds(1);
             player1AtkUI.SetActive(true);
@@ -137,62 +135,62 @@ public class newGameHandler2 : MonoBehaviour
     public void p1LowPunch()
     {
         StartCoroutine(delaySystem(3,75,player2HP,1,2,2));
-        Debug.Log("Player 1 used LowPunch.");
+        //Debug.Log("Player 1 used LowPunch.");
     }
 
     public void p1HighPunch()
     {
         StartCoroutine(delaySystem(8,55,player2HP,1,3,2));
-        Debug.Log("Player 1 used HighPunch.");
+        //Debug.Log("Player 1 used HighPunch.");
     }
 
     public void p1LowKick()
     {
         StartCoroutine(delaySystem(6,65,player2HP,1,2,2));
-        Debug.Log("Player 1 used LowKick.");
+        //Debug.Log("Player 1 used LowKick.");
     }
 
     public void p1HighKick()
     {
         StartCoroutine(delaySystem(12,45,player2HP,1,3,2));
-        Debug.Log("Player 1 used HighKick.");
+        //Debug.Log("Player 1 used HighKick.");
     }
 
     public void p1Special()
     {
         StartCoroutine(delaySystem(25,90,player2HP,1,5,3));
-        Debug.Log("Player 1 used Special.");
+        //Debug.Log("Player 1 used Special.");
         special.SetActive(false);
     }
 
     public void p2LowPunch()
     {
         StartCoroutine(delaySystem(3,75,player1HP,2,2,2));
-        Debug.Log("Player 2 used LowPunch.");
+        //Debug.Log("Player 2 used LowPunch.");
     }
 
     public void p2HighPunch()
     {
         StartCoroutine(delaySystem(8,55,player1HP,2,3,2));
-        Debug.Log("Player 2 used HighPunch.");
+        //Debug.Log("Player 2 used HighPunch.");
     }
 
     public void p2LowKick()
     {
         StartCoroutine(delaySystem(6,65,player1HP,2,2,2));
-        Debug.Log("Player 2 used LowKick.");
+        //Debug.Log("Player 2 used LowKick.");
     }
 
     public void p2HighKick()
     {
         StartCoroutine(delaySystem(12,45,player1HP,2,3,2));
-        Debug.Log("Player 2 used HighKick.");
+        //Debug.Log("Player 2 used HighKick.");
     }
     public void p2Special()
     {
         StartCoroutine(delaySystem(25,90,player1HP,2,5,3));
         Debug.Log("Player 2 used Special.");
-        special2.SetActive(false);
+        //special2.SetActive(false);
     }
 
     /* public void p2HighPunch()

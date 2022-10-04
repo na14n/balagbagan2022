@@ -17,6 +17,10 @@ public class inputHandler : MonoBehaviour
     public string name2;
     public int winResult;
 
+    public int p1Dealt;
+    public int p2Dealt;
+
+
     void Awake()
     {
         

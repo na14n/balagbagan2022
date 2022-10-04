@@ -18,14 +18,14 @@ public class victoryBttns : MonoBehaviour
     }
 
     public void pressRestart(){
-        StartCoroutine(delayPress());
+        StartCoroutine(restart());
         Debug.Log("Start");
     }
 
-    IEnumerator delayPress(){
+    IEnumerator restart(){
         yield return new WaitForSeconds(2);
         Debug.Log("This is Delayed");
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(2);
     }
     public void pressMainmenu(){
         StartCoroutine(mainMenudelay());
@@ -36,6 +36,6 @@ public class victoryBttns : MonoBehaviour
         Debug.Log("Returning to Main Menu");
         yield return new WaitForSeconds(2);
         Debug.Log("Returned to Main Menu");
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(1);
     }
 }
